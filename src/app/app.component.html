@@ -1,14 +1,16 @@
 <mat-card class="my-card">
-  <span><mat-icon>account_circle</mat-icon><h4>Vishal</h4></span>
-  <button mat-button>Logout</button>
-  
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <div class="title">
+    <mat-icon style="color: white; margin-right: 15px; z-index: 0">account_circle</mat-icon>
+    <h4 style="color: white; display: inline; margin-top: 2px; z-index: 0;">Vishal</h4>
+  </div>
+
+  <img mat-card-image style="margin-top: -55px" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
   
   <mat-list>
   	<mat-list-item>
   		<span>Call with Ryan</span>
   		<span class="spacer"></span>
-  		<mat-checkbox></mat-checkbox>
+  		<mat-checkbox (click)=checkMe()></mat-checkbox>
   		<button mat-icon-button [matMenuTriggerFor]="menu">
 		    <mat-icon>more_vert</mat-icon>
 		  </button>
@@ -55,4 +57,9 @@
 	  </mat-list-item>
   </mat-list>
 </mat-card>
-<button mat-fab color="warn"> + </button>
+<!--<div *ngFor="let todo of todos">-->
+<!--  {{todo.text}}-->
+<!--</div>-->
+<!--<input type="text" [(ngModel)]="todoText" value={{todoText}}>-->
+<!--<button mat-fab color="warn" (click)=addTodo()> + </button>-->
+<button mat-fab color="warn" (click)="openDialog()"> + </button>

@@ -15,6 +15,10 @@ export class MyDialogComponent implements OnInit {
   ngOnInit() {
   }
   
+  public addNewTodo() {
+    
+  }
+  
   public cancel() {
     this.matDialogRef.close();
   }
