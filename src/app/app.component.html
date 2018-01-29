@@ -13,7 +13,7 @@
 		    <mat-icon>more_vert</mat-icon>
 		  </button>
     	<mat-menu mat-position-mode="target-right target" mat-offset="0 42" #menu="matMenu">
-    	  <button mat-menu-item>
+    	  <button mat-menu-item (click)="deleteThis(i)">
     	    <mat-icon>delete</mat-icon>
     	    <span>Delete</span>
     	  </button>
@@ -30,7 +30,7 @@
 		    <mat-icon>more_vert</mat-icon>
 		  </button>
     	<mat-menu mat-position-mode="target-right target" mat-offset="0 42" #menu="matMenu">
-    	  <button mat-menu-item>
+    	  <button mat-menu-item (click)="deleteThis(i)">
     	    <mat-icon>delete</mat-icon>
     	    <span>Delete</span>
     	  </button>
@@ -54,5 +54,5 @@
     	</mat-menu>
 	  </mat-list-item>
   </mat-list>
-
 </mat-card>
+<button mat-fab color="warn"> + </button>
